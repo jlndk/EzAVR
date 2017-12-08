@@ -13,8 +13,11 @@ void lib_init () {
     //Set the initial value of the displays
     set_display(-1);
 
-    //Call the users initialization code
+    //Call the user's initialization code
     initialize();
+
+    //Enable interupts after the users initialization code
+    enable_interupts();
 }
 
 /**
@@ -30,15 +33,12 @@ int main(void)
         //Call the user's main loop each time
         loop();
 
-        //Handle displays
-        display_handle();
-
         //If debug mode is enabled, then show the debug "ui"
         #if IS_DEBUG
             debug_handle();
         #endif
 
-        //Wait for some time
+        // Wait for some time
         delay(MAIN_DELAY);
     }
 }

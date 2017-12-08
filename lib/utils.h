@@ -3,6 +3,17 @@ long map(long x, long in_min, long in_max, long out_min, long out_max)
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
+long limit(long val, long min, long max)
+{
+    if(val <= min) {
+        return min;
+    }
+    if(val >= max) {
+        return max;
+    }
+    return val;
+}
+
 #ifdef IS_DEBUG
     void delay(int amount)
     {

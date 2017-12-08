@@ -16,3 +16,4 @@ An easy framework for developing AVR applications.
 
 ## Contribution
 You're very welcome to suggest improvements to this project. Just fork this repo, make your changes and submit a pull request. If you want to suggest a new feature to the project you should properly create an issue first, so you dont waste your time on code that won't be merged. Please don't be offended if I don't accept your feature or idea.
+

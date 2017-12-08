@@ -1,5 +1,6 @@
 /**
  * Sets the adc frequency
+ * @TODO: Let user set the frequency as an int
  */
 void set_adc_freq() {
     ADCSRA=(1<<ADEN)|(1<<ADPS2)|(ADPS1)|(ADPS0);
@@ -11,6 +12,10 @@ void set_adc_freq() {
  * @return: the value read from the pin.
  */
 int read_analog_pin(int ch) {
+
+	//Clear admux from last ad convertion
+    ADMUX &= 0b11111000;
+
     //Select ADC Channel ch must be 0-7
     ch=ch&0b00000111;
     ADMUX|=ch;

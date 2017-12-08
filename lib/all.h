@@ -5,12 +5,15 @@
 //Load the AVR modules if debug is disabled
 #else
     #include <avr/io.h>
+    #include <avr/interrupt.h>
     #include <util/delay.h>
 #endif
 
 //Load modules that should be loaded everywhere
 #include "display.h"
+#include "io.h"
 #include "utils.h" //Load our utility functions
+#include "interupts.h"
 
 //Load modules that should only be loaded in the AVR environment
 #if !defined(IS_DEBUG)

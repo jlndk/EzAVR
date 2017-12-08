@@ -2,11 +2,11 @@
 
 int button_is_pressed(int port)
 {
-    //@TODO: implementation
-    return 0;
+    return bit_is_clear(PINB,port);
 }
 
-void set_digital_value(int device, int activated)
+void digital_write(int pin, int activated)
 {
-    //@TODO: implementation
+
+
 }

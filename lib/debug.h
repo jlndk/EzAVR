@@ -1,4 +1,8 @@
 void debug_handle() {
+
+    //Run interupts manually
+    interupt1();
+
     system("clear");
 
     printf("REGISTERS");
@@ -53,6 +57,32 @@ void debug_handle() {
     printf("PORT D: ");
     print_dec_as_bin(PORTD);
     printf(" = %d ", PORTD);
+
+    printf("\n-------------------------------------\n\n");
+
+    printf("PINS:");
+    printf("\n-------------------------------------\n");
+    printf("PIN A: ");
+    print_dec_as_bin(PINA);
+    printf(" = %d ", PINA);
+
+    printf("\n");
+
+    printf("PIN B: ");
+    print_dec_as_bin(PINB);
+    printf(" = %d ", PINB);
+
+    printf("\n");
+
+    printf("PIN C: ");
+    print_dec_as_bin(PINC);
+    printf(" = %d ", PINC);
+
+    printf("\n");
+
+    printf("PIN D: ");
+    print_dec_as_bin(PIND);
+    printf(" = %d ", PIND);
 
     printf("\n-------------------------------------\n\n");
 
